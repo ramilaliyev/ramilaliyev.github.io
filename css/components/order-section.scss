@@ -1,0 +1,19 @@
+.order-section {
+    background: url(../../img/order-bg.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::before {
+        content: url(../../img/decor/Ягода1.png);
+        position: absolute;
+        bottom: 69px;
+        left: 5%;
+    }
+
+    &::after {
+        content: url(../../img/decor/лист-3-1.png);
+        position: absolute;
+        bottom: 58px;
+        right: 1%;
+    }
+}

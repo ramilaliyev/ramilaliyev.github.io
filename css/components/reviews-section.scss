@@ -1,0 +1,19 @@
+.reviews-section {
+    position: relative;
+    background: url(../../img/decor/Узор1.svg) left bottom -164px no-repeat;
+
+    &::before {
+        content: url(../../img/decor/Ягоды2.svg);
+        position: absolute;
+        bottom: -107px;
+        left: 0;
+        z-index: 2 //temp-value;
+    }
+
+    &::after {
+        content: url(../../img/decor/Ягода-3_1.svg);
+        position: absolute;
+        top: 42px;
+        right: 1.6%;
+    }
+}
