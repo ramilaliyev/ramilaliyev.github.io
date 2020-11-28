@@ -108,9 +108,12 @@ img {
 
 .hero__title-desc {
   font-size: 21px;
-  margin-bottom: 20px;
+  margin: 10px 0;
   padding-right: 15%;
   line-height: 1; }
+
+.btn-hero__block {
+  margin-top: 50px; }
 
 .header {
   display: -webkit-box;
@@ -167,7 +170,7 @@ img {
   display: flex; }
 
 .features__item {
-  margin-right: 46px; }
+  margin-right: 60px; }
   .features__item:last-child {
     margin-right: 0; }
 
@@ -249,8 +252,13 @@ img {
 .headline {
   margin-bottom: 25px; }
 
+.headline__title {
+  margin-bottom: 0; }
+
 .headline__subtitle {
-  padding: 0 26%; }
+  padding: 0 26%;
+  text-align: center;
+  margin-bottom: 50px; }
 
 .benefits {
   display: -webkit-box;
@@ -300,6 +308,9 @@ img {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
+.reviews__heading {
+  margin-bottom: 32px; }
+
 .reviews__display {
   background: #F8FAF9;
   padding: 30px 45px 34px;
@@ -332,6 +343,7 @@ img {
   display: flex; }
 
 .reviews__avatar {
+  margin-top: 20px;
   width: 253px;
   height: 264px; }
 
@@ -342,19 +354,21 @@ img {
   object-fit: cover; }
 
 .reviews__content {
-  margin-left: 30px;
+  margin-left: 20px;
   -webkit-box-flex: 1;
   -ms-flex: 1;
-  flex: 1; }
+  flex: 1;
+  line-height: 1.2; }
 
 .reviews__title {
   font-size: 30px;
   font-weight: bold;
-  margin-bottom: 22px;
+  margin-top: 25px;
+  margin-bottom: 23px;
   color: #000; }
 
 .reviews__text {
-  margin-bottom: 36px;
+  margin-bottom: 30px;
   margin-right: 15px;
   width: 78%; }
 
@@ -473,7 +487,7 @@ img {
   flex-wrap: wrap; }
 
 .form__btns {
-  margin-bottom: 85px; }
+  margin-top: 15px; }
 
 .radio {
   display: -webkit-box;
