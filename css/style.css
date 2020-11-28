@@ -103,17 +103,14 @@ img {
   font-size: 48px;
   font-weight: bold;
   line-height: 1.195;
-  margin-bottom: 4px;
+  margin-bottom: 14px;
   text-transform: uppercase; }
 
 .hero__title-desc {
   font-size: 21px;
-  margin: 10px 0;
+  margin-bottom: 60px;
   padding-right: 15%;
   line-height: 1; }
-
-.btn-hero__block {
-  margin-top: 50px; }
 
 .header {
   display: -webkit-box;
@@ -308,6 +305,10 @@ img {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
+.benefit__title {
+  font-weight: bold;
+  color: #000; }
+
 .reviews__heading {
   margin-bottom: 32px; }
 
@@ -358,12 +359,12 @@ img {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin-top: 25px; }
 
 .reviews__title {
   font-size: 30px;
   font-weight: bold;
-  margin-top: 25px;
   margin-bottom: 23px;
   color: #000; }
 
@@ -408,7 +409,7 @@ img {
   border-radius: 50%;
   overflow: hidden;
   position: relative; }
-  .interactive-avatar--active {
+  .interactive-avatar--active, .interactive-avatar:hover {
     border: 6px solid #0f5a47; }
 
 .interactive-avatar__link {
@@ -440,6 +441,9 @@ img {
     bottom: 58px;
     right: 1%; }
 
+.order-section__title {
+  margin-bottom: 50px; }
+
 .form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -457,14 +461,15 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 18px; }
+  margin-bottom: 5px; }
+  .form__row:last-child {
+    margin-bottom: 0; }
 
 .form__block {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  margin-right: 20px;
-  margin-top: -15px; }
+  margin-right: 20px; }
   .form__block:last-child {
     margin-right: 0; }
 
@@ -477,7 +482,8 @@ img {
     outline: none; }
   .form__input--textarea {
     height: 152px;
-    resize: none; }
+    resize: none;
+    margin-bottom: 20px; }
 
 .form__controls {
   display: -webkit-box;
@@ -541,7 +547,9 @@ img {
 
 .fixed-menu__item {
   margin-bottom: 5px; }
-  .fixed-menu__item--active .fixed-menu__link {
+  .fixed-menu__item:last-child {
+    margin-bottom: 0; }
+  .fixed-menu__item--active .fixed-menu__link, .fixed-menu__item:hover .fixed-menu__link {
     border-color: #fff; }
 
 .fixed-menu__link {

@@ -8,7 +8,11 @@
 .fixed-menu__item {
     margin-bottom: 5px;
 
-    &--active {
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &--active, &:hover {
         .fixed-menu__link {
             border-color: #fff;
         }

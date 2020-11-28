@@ -6,10 +6,11 @@
     overflow: hidden;
     position: relative;
 
-    &--active {
+    &--active, &:hover {
         border: 6px solid #0f5a47;
-        
     }
+
+
 }
 
 .interactive-avatar__link {
