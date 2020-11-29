@@ -410,7 +410,7 @@ img {
   overflow: hidden;
   position: relative; }
   .interactive-avatar--active, .interactive-avatar:hover {
-    border: 6px solid #0f5a47; }
+    border-color: #0f5a47; }
 
 .interactive-avatar__link {
   position: absolute;
