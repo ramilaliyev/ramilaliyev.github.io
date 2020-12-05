@@ -1,42 +1,64 @@
+.reviews__container {
+    @include tablets {
+        margin-bottom: rem(50px);
+    }
+}
+
 .reviews__heading {
-    margin-bottom: 32px;
+    margin-bottom: rem(32px);
+
+    @include tablets {
+        margin-bottom: rem(48px);
+    }
 }
 
 .reviews__display {
     background: #F8FAF9;
-    padding: 30px 45px 34px;
+    padding: rem(30px) rem(45px) rem(34px);
     overflow: hidden;
     position: relative;
 
     &::before {
         content: "";
         display: flex;
-        width: 80px;
-        height: 80px;
+        width: rem(80px);
+        height: rem(80px);
         background: #fff;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        top: -60px;
+        top: rem(-60px);
         border-radius: 50%;
     }
 
     &::after {
         content: url(../../img/decor/Слой2_1.svg);
         position: absolute;
-        top: 22px;
+        top: rem(22px);
         right: 0;
     }
 }
 
 .reviews__display-inner {
     display: flex;
+
+    @include tablets {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
 }
 
 .reviews__avatar {
-    margin-top: 20px;
-    width: 253px;
-    height: 264px;
+    margin-top: rem(20px);
+    width: rem(253px);
+    height: rem(264px);
+
+    @include tablets {
+        width: rem(130px);
+        height: rem(130px);
+        margin-top: rem(20px);
+    }
 }
 
 .reviews__avatar-img {
@@ -46,28 +68,36 @@
 }
 
 .reviews__content {
-    margin-left: 20px;
+    margin-left: rem(20px);
     flex: 1;
     line-height: 1.2;
-    margin-top: 25px;
+    margin-top: rem(25px);
+
+    @include tablets {
+        text-align: center;
+        margin-top: rem(30px);
+    }
 }
 
 .reviews__title {
-    font-size: 30px;
+    font-size: rem(30px);
     font-weight: bold;
-    // margin-top: 25px;
-    margin-bottom: 23px;
+    margin-bottom: rem(23px);
     color: #000;
 }
 
 .reviews__text {
-    margin-bottom: 30px;
-    margin-right: 15px;
+    margin-bottom: rem(30px);
+    margin-right: rem(15px);
     width: 78%;
+
+    @include tablets {
+        width: 100%;
+    }
 }
 
 .reviews__author {
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: bold;
     color: #000;
 }
@@ -75,5 +105,13 @@
 .reviews__switcher {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: rem(15px);
+
+    @include tablets {
+        margin-top: rem(30px);
+    }
+
+    @include phones {
+        margin-top: rem(50px);
+    }
 }

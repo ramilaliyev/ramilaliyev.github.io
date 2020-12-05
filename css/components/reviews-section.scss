@@ -1,19 +1,38 @@
 .reviews-section {
     position: relative;
-    background: url(../../img/decor/Узор1.svg) left bottom -164px no-repeat;
+    background: url(../../img/decor/Узор1.svg) left bottom rem(-164px) no-repeat;
 
     &::before {
         content: url(../../img/decor/Ягоды2.svg);
         position: absolute;
-        bottom: -107px;
+        bottom: rem(107px);
         left: 0;
-        z-index: 2 //temp-value;
+        z-index: 2; //temp-value
+
+        @include tablets {
+            left: rem(-40px);
+            bottom: rem(-18px);
+        }
+
+        @include phones {
+            bottom: rem(-80px);
+        }
     }
 
     &::after {
         content: url(../../img/decor/Ягода-3_1.svg);
         position: absolute;
-        top: 42px;
+        top: rem(42px);
         right: 1.6%;
+
+        @include tablets {
+            top: rem(22px);
+            right: -2.4%;
+        }
+
+        @include tablets {
+            top: rem(22px);
+            right: -5.4%;
+        }
     }
 }
