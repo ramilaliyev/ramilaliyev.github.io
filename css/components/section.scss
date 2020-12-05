@@ -12,6 +12,10 @@
             color: inherit;    
         }
     }
+
+    @include phones {
+        margin-top: 12.5%;
+    }
 }
 
 .section__title {

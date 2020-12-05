@@ -21,6 +21,10 @@
 
 .order-section__title {
     margin-bottom: rem(50px);
+
+    @include phones {
+        margin-bottom: 0;
+    }
 }
 
 .order-container {

@@ -347,6 +347,9 @@ img {
     color: #0b4d3c; }
     .section--font-color--green .section__title {
       color: inherit; }
+  @media screen and (max-width: 480px) {
+    .section {
+      margin-top: 12.5%; } }
 
 .section__title {
   font-size: 2.66667rem;
@@ -689,6 +692,9 @@ img {
 
 .order-section__title {
   margin-bottom: 2.77778rem; }
+  @media screen and (max-width: 480px) {
+    .order-section__title {
+      margin-bottom: 0; } }
 
 .order-container {
   margin-bottom: 5rem; }
@@ -822,6 +828,9 @@ img {
 .map-section {
   background: url(../../img/карта.jpg) center center no-repeat;
   background-size: cover; }
+  @media screen and (max-width: 480px) {
+    .map-section {
+      margin-top: 0; } }
 
 .footer {
   background: #fff;
