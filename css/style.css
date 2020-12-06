@@ -265,8 +265,9 @@ img {
       display: -webkit-inline-box;
       display: -ms-inline-flexbox;
       display: inline-flex;
-      margin-top: 6px;
-      margin-right: 15px; } }
+      position: fixed;
+      top: 1.66667rem;
+      right: 0.55556rem; } }
 
 .hamburger__plank {
   display: block;
@@ -557,17 +558,16 @@ img {
       text-align: center;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center; } }
+      align-items: center;
+      padding-top: 1.11111rem; } }
 
 .reviews__avatar {
-  margin-top: 1.11111rem;
   width: 14.05556rem;
   height: 14.66667rem; }
   @media screen and (max-width: 768px) {
     .reviews__avatar {
       width: 7.22222rem;
-      height: 7.22222rem;
-      margin-top: 1.11111rem; } }
+      height: 7.22222rem; } }
 
 .reviews__avatar-img {
   width: 100%;
@@ -866,7 +866,8 @@ img {
       font-size: 1.16667rem; } }
 
 .contacts {
-  font-style: normal; }
+  font-style: normal;
+  margin-bottom: 1.05556rem; }
 
 .contacts__place {
   color: #000; }
@@ -886,8 +887,7 @@ img {
       display: flex;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center;
-      margin-bottom: 1.05556rem; } }
+      justify-content: center; } }
 
 .socials {
   display: -webkit-box;

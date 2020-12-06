@@ -7,8 +7,11 @@
     
     @include tablets {
         display: inline-flex;
-        margin-top: 6px;
-        margin-right: 15px;
+        // margin-top: 6px;
+        // margin-right: 15px;
+        position: fixed;
+        top: rem(30px);
+        right: rem(10px);
     }
 }
 

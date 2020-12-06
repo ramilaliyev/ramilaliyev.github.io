@@ -36,6 +36,7 @@
         position: absolute;
         top: rem(22px);
         right: 0;
+
     }
 }
 
@@ -46,18 +47,19 @@
         flex-direction: column;
         text-align: center;
         align-items: center;
+        padding-top: rem(20px);
     }
 }
 
 .reviews__avatar {
-    margin-top: rem(20px);
+    // margin-top: rem(20px);
     width: rem(253px);
     height: rem(264px);
 
     @include tablets {
         width: rem(130px);
         height: rem(130px);
-        margin-top: rem(20px);
+        // margin-top: rem(20px);
     }
 }
 

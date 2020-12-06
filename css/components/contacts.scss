@@ -1,5 +1,6 @@
 .contacts {
     font-style: normal;
+    margin-bottom: rem(19px);
 }
 
 .contacts__place {
@@ -19,6 +20,6 @@
     @include phones {
         display: flex;
         justify-content: center;
-        margin-bottom: rem(19px);
+        // margin-bottom: rem(19px);
     }
 }
