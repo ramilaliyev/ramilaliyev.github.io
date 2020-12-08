@@ -585,7 +585,8 @@ img {
   @media screen and (max-width: 768px) {
     .reviews__content {
       text-align: center;
-      margin-top: 1.66667rem; } }
+      margin-top: 1.66667rem;
+      margin-left: 0; } }
 
 .reviews__title {
   font-size: 1.66667rem;
