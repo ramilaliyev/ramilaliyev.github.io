@@ -18,7 +18,33 @@
     flex-wrap: wrap;
     
     @include tablets {
-        display: none;
+        visibility: hidden;
+        left: 100%;
+    }
+}
+
+.menu__list--active {
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    left: 0;
+    top: 0;
+    visibility: visible;
+    background: #313131;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: $z-index-menu;
+    padding-top: rem(145px);
+    transition: .4s ease-in-out;
+
+    .menu__item {
+        margin-bottom: rem(25px);
+        font-size: rem(36px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 

@@ -7,10 +7,14 @@
     
     @include tablets {
         display: inline-flex;
-        // margin-top: 6px;
-        // margin-right: 15px;
+        // margin-top: rem(5px);
+        // margin-right: rem(5px);
         position: fixed;
         top: rem(30px);
+        right: rem(40px);
+    }
+
+    @include phones {
         right: rem(10px);
     }
 }
@@ -20,4 +24,28 @@
     background: #fff;
     height: 4px;
     border-radius: 10px;
+
+    transition: ease-in-out .4s;
+}
+
+.hamburger--active {
+    z-index: $z-index-menu;
+    // top: rem(42px);
+    // right: rem(42px);
+
+    .hamburger__plank {
+        width: 24px;
+
+        &:nth-child(1) {
+            opacity: 0;
+        }
+        
+        &:nth-child(2) {
+            transform: rotate(45deg);
+        }
+        
+        &:nth-child(3) {
+            transform: rotate(-45deg) translateX(5.5px) translateY(-6px);
+        }
+    }
 }

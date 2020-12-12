@@ -34,6 +34,11 @@ $phones: 480px;
 @import 'components/benefits';
 @import 'components/benefit';
 
+@import 'components/goods-section';
+@import 'components/goods';
+@import 'components/goods-arrows';
+@import 'components/goods-composition';
+
 @import 'components/reviews';
 @import 'components/reviews-section';
 @import 'components/interactive-avatar';
@@ -49,3 +54,7 @@ $phones: 480px;
 @import 'components/socials';
 
 @import 'components/fixed-menu';
+
+.body--active-menu {
+    overflow: hidden;
+}

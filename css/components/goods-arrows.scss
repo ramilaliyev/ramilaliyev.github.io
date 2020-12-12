@@ -1,0 +1,28 @@
+.arrow-block {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.tablet-arrow-block {
+    display: none;
+
+    @include tablets {
+        display: flex;
+    }
+}
+
+.arrow-icon {
+    width: rem(40px);
+    height: rem(80px);
+    cursor: pointer;
+}
+
+.left-arrow-icon {
+    transform: rotate(180deg);
+
+}
