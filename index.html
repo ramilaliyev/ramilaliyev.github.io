@@ -17,31 +17,35 @@
                                 <use xlink:href="./sprite.svg#logo"></use>
                             </svg>
                         </a>
-                        <nav class="menu">
-                            <ul class="menu__list">
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">О нас</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Батончики</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Команда</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Меню</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Отзывы</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Как мы работаем</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Контакты</a>
-                                </li>
-                            </ul>
-                        </nav>
+                        <div class="overlay" id="overlay">
+                            <div class="overlay__menu" id="overlay__menu">
+                                <nav class="menu">
+                                    <ul class="menu__list">
+                                        <li class="menu__item">
+                                        <a href="#" class="menu__link">О нас</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Батончики</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Команда</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Меню</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Отзывы</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Как мы работаем</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Контакты</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
                         <a href="tel:+78009039090" class="phone-number">
                             <span class="phone-number__icon">
                                 <svg class="phone-number__icon-elem">
@@ -194,7 +198,7 @@
                         </div>
                         <div class="goods__text">
                             <div class="goods__composition">
-                                <div class="goods__composition-btn">
+                                <div class="goods__composition-btn" id="goods__composition-btn">
                                     <img src="./img/composition-btn.png" alt="composition-btn-icon" class="goods__composition-btn-icon" id="goods__composition-btn-icon">
                                     <div class="goods__composition-block" id="goods__composition-block">
                                         <ul class="goods__composition-list">

@@ -4,6 +4,8 @@
     display: none;
     flex-direction: column;
     justify-content: space-between;
+    transition: ease-in-out .4s;
+
     
     @include tablets {
         display: inline-flex;

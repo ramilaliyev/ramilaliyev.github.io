@@ -215,40 +215,57 @@ img {
   flex-wrap: wrap; }
   @media screen and (max-width: 768px) {
     .menu__list {
-      visibility: hidden;
-      left: 100%; } }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
-.menu__list--active {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  text-align: center;
-  left: 0;
-  top: 0;
-  visibility: visible;
-  background: #313131;
+.overlay {
   height: 100%;
   width: 100%;
+  background: #313131;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: ease-in-out .4s;
+  -o-transition: ease-in-out .4s;
+  transition: ease-in-out .4s;
   position: fixed;
-  z-index: 100;
-  padding-top: 5.55556rem;
-  -webkit-transition: .4s ease-in-out;
-  -o-transition: .4s ease-in-out;
-  transition: .4s ease-in-out; }
-  .menu__list--active .menu__item {
-    margin-bottom: 1.38889rem;
-    font-size: 2rem; }
-    .menu__list--active .menu__item:last-child {
-      margin-bottom: 0; }
+  left: 100%;
+  top: 0;
+  opacity: 0;
+  z-index: 100; }
+
+.overlay--active {
+  left: 0;
+  opacity: 1; }
 
 .menu__item {
   margin-right: 0.83333rem; }
   .menu__item:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    .menu__item {
+      margin-bottom: 1.38889rem;
+      font-size: 2rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .menu__item:last-child {
+        margin-bottom: 0; } }
 
 .menu__link {
   text-decoration: none; }
@@ -287,7 +304,10 @@ img {
   flex-direction: column;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  -webkit-transition: ease-in-out .4s;
+  -o-transition: ease-in-out .4s;
+  transition: ease-in-out .4s; }
   @media screen and (max-width: 768px) {
     .hamburger {
       display: -webkit-inline-box;
