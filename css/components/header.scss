@@ -13,7 +13,7 @@
 .menu__list {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     white-space: nowrap;
     flex-wrap: wrap;
     
@@ -23,19 +23,21 @@
 }
 
 .overlay {
-    height: 100%;
-    width: 100%;
-    background: #313131;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: ease-in-out .4s;
-
-    position: fixed;
-    left: 100%;
-    top: 0;
-    opacity: 0;
-    z-index: $z-index-menu;
+    @include tablets {
+        height: 100%;
+        width: 100%;
+        background: #313131;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: ease-in-out .4s;
+    
+        position: fixed;
+        left: 100%;
+        top: 0;
+        opacity: 0;
+        z-index: $z-index-menu;
+    }
 }
 
 .overlay--active {
@@ -53,6 +55,7 @@
 
     @include tablets {
         margin-bottom: rem(25px);
+        margin-right: 0;
         font-size: rem(36px);
         display: flex;
         flex-direction: column;

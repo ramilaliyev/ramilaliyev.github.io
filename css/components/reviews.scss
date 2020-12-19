@@ -40,6 +40,22 @@
     }
 }
 
+.reviews__list {
+    position: relative;
+    min-height: rem(264px);
+}
+
+.reviews__item {
+    position: absolute;
+    opacity: 0;
+    transition: ease-out .6s;
+
+    &--active {
+        position: static;
+        opacity: 1;
+    }
+}
+
 .reviews__display-inner {
     display: flex;
 

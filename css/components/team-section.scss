@@ -1,0 +1,17 @@
+.team-section {
+    position: relative;
+
+    &::before {
+        content: url(../../img/decor/Ягода-2_1.svg);
+        position: absolute;
+        left: 3%;
+        bottom: -7%;
+    }
+
+    &::after {
+        content: url(../../img/decor/Слой_1_1.png);
+        position: absolute;
+        right: 1.1%;
+        top: -5%;
+    }
+}
