@@ -37,6 +37,11 @@
         top: rem(22px);
         right: 0;
 
+        @include phones {
+            top: rem(-10px);
+            width: 30%;
+        }
+
     }
 }
 

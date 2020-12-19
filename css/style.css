@@ -994,7 +994,7 @@ img {
       .reviews-section::after {
         top: 1.22222rem;
         right: -2.4%; } }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 480px) {
       .reviews-section::after {
         top: 1.22222rem;
         right: -5.4%; } }
@@ -1034,6 +1034,10 @@ img {
     position: absolute;
     top: 1.22222rem;
     right: 0; }
+    @media screen and (max-width: 480px) {
+      .reviews__display::after {
+        top: -0.55556rem;
+        width: 30%; } }
 
 .reviews__list {
   position: relative;
