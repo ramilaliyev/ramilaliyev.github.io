@@ -179,6 +179,7 @@ submitBtn.addEventListener('click', e => {
             if (status < 400) {
                 responseForm.classList.add('form-response--active');
                 modalResponse.textContent = "Сообщение отправлено";
+                modalResponse.classList.remove('post-error');
             } else {
                 responseForm.classList.add('form-response--active');
                 modalResponse.textContent = "Произошла ошибка. Повторите попытку позже";
