@@ -72,11 +72,11 @@ const slider = $('.goods__list').bxSlider({
 );
 
 $('.left-arrow-block').click((e) => {
-slider.goToPrevSlide();
+    slider.goToPrevSlide();
 })
 
 $('.right-arrow-block').click((e) => {
-slider.goToNextSlide();
+    slider.goToNextSlide();
 })
 
 // // // // // // // // // // // // // // //
