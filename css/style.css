@@ -609,7 +609,7 @@ img {
     -webkit-box-shadow: none;
     box-shadow: none;
     border: 0;
-    max-width: 85%; }
+    max-width: 85% !important; }
 
 .goods {
   display: -webkit-box;
