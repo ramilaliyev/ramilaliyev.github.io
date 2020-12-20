@@ -180,6 +180,17 @@ submitBtn.addEventListener('click', e => {
                 responseForm.classList.add('form-response--active');
                 modalResponse.textContent = "Сообщение отправлено";
                 modalResponse.classList.remove('post-error');
+
+                // Очистка формы происходит только при успешной отправке
+
+                document.querySelectorAll('.form__input').forEach(element => {
+                    element.value = "";
+                });
+
+                document.querySelectorAll('.radio__elem').forEach(element => {
+                    element.checked = false;
+                });
+
             } else {
                 responseForm.classList.add('form-response--active');
                 modalResponse.textContent = "Произошла ошибка. Повторите попытку позже";

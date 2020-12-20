@@ -781,9 +781,6 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  @media screen and (max-width: 768px) {
-    .arrow-block {
-      display: none; } }
 
 .tablet-arrow-block {
   display: none; }
@@ -935,7 +932,8 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 0.44444rem; }
+  margin-bottom: 0.44444rem;
+  cursor: pointer; }
 
 .team__person-name {
   color: #000;
