@@ -240,3 +240,44 @@ modalCloseBtn.addEventListener('click', () => {
     const responseForm = document.querySelector('.form-response');
     responseForm.classList.remove('form-response--active');
 });
+
+
+
+// // // // // // // // // // // // // // //
+
+// Карта
+
+let myMap;
+
+const init = () => {
+    myMap = new ymaps.Map('map', {
+        center: [55.831883, 37.575994],
+        zoom: 11,
+        controls: ['zoomControl']
+    });
+
+    const coords = [
+        [55.753124, 37.582400],
+        [55.789846, 37.521374],
+        [55.907134, 37.403915],
+        [55.943311, 37.302710],
+    ];
+
+    var myCollection = new ymaps.GeoObjectCollection({}, {
+        draggable: false, // и их можно перемещать
+        iconLayout: 'default#image',
+        iconImageHref: './img/icons/marker.svg',
+        iconImageSize: [30, 42],
+        // iconImageOffset: [-3, -42]
+    });
+
+    coords.forEach(coord => {
+        myCollection.add(new ymaps.Placemark(coord));
+    });
+
+    myMap.geoObjects.add(myCollection);
+
+    myMap.behaviors.disable('scrollZoom');
+};
+
+ymaps.ready(init);

@@ -444,10 +444,11 @@ img {
     content: url(../../img/decor/малина1.svg);
     position: absolute;
     bottom: -4.44444rem;
-    left: 0; }
+    left: 0;
+    z-index: 80; }
     @media screen and (max-width: 768px) {
       .benefits-section::before {
-        bottom: -3.05556rem; } }
+        bottom: -4.16667rem; } }
     @media screen and (max-width: 480px) {
       .benefits-section::before {
         display: none; } }
@@ -591,7 +592,7 @@ img {
     @media screen and (max-width: 480px) {
       .goods-section:after {
         right: -20%;
-        bottom: -40%; } }
+        bottom: -25%; } }
 
 .goods-container {
   display: -webkit-box;
@@ -880,12 +881,20 @@ img {
     content: url(../../img/decor/Ягода-2_1.svg);
     position: absolute;
     left: 3%;
-    bottom: -7%; }
+    bottom: -9%;
+    z-index: 105; }
   .team-section::after {
     content: url(../../img/decor/Слой_1_1.png);
     position: absolute;
     right: 1.1%;
     top: -5%; }
+    @media screen and (max-width: 768px) {
+      .team-section::after {
+        top: -13%; } }
+    @media screen and (max-width: 480px) {
+      .team-section::after {
+        top: -17%;
+        margin-top: 0; } }
 
 .team {
   display: -webkit-box;
@@ -974,19 +983,22 @@ img {
 .reviews-section {
   position: relative;
   background: url(../../img/decor/Узор1.svg) left bottom -9.11111rem no-repeat; }
+  @media screen and (max-width: 480px) {
+    .reviews-section {
+      background-position: left bottom -16.66667rem; } }
   .reviews-section::before {
     content: url(../../img/decor/Ягоды2.svg);
     position: absolute;
-    bottom: 5.94444rem;
+    bottom: -4.88889rem;
     left: 0;
     z-index: 2; }
     @media screen and (max-width: 768px) {
       .reviews-section::before {
         left: -2.22222rem;
-        bottom: -1rem; } }
+        bottom: -3rem; } }
     @media screen and (max-width: 480px) {
       .reviews-section::before {
-        bottom: -4.44444rem; } }
+        bottom: -10rem; } }
   .reviews-section::after {
     content: url(../../img/decor/Ягода-3_1.svg);
     position: absolute;
@@ -1165,6 +1177,9 @@ img {
     position: absolute;
     bottom: 3.83333rem;
     left: 5%; }
+    @media screen and (max-width: 768px) {
+      .order-section::before {
+        display: none; } }
   .order-section::after {
     content: url(../../img/decor/лист-3-1.png);
     position: absolute;
@@ -1312,12 +1327,13 @@ img {
     transform: translate(-50%, -50%);
     display: none; }
 
-.map-section {
-  background: url(../../img/карта.jpg) center center no-repeat;
-  background-size: cover; }
-  @media screen and (max-width: 480px) {
-    .map-section {
-      margin-top: 0; } }
+@media screen and (max-width: 480px) {
+  .map-section {
+    margin-top: 0; } }
+
+.map {
+  height: 100%;
+  width: 100%; }
 
 .footer {
   background: #fff;

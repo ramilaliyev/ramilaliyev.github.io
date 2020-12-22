@@ -15,9 +15,10 @@
         position: absolute;
         bottom: rem(-80px);
         left: 0;
+        z-index: $z-index-menu - 20;
 
         @include tablets {
-            bottom: rem(-55px);
+            bottom: rem(-75px);
         }
 
         @include phones {

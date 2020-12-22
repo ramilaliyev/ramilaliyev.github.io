@@ -8,6 +8,10 @@
         position: absolute;
         bottom: rem(69px);
         left: 5%;
+
+        @include tablets {
+            display: none;
+        }
     }
 
     &::after {

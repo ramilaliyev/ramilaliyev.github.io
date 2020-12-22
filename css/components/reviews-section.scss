@@ -2,20 +2,24 @@
     position: relative;
     background: url(../../img/decor/Узор1.svg) left bottom rem(-164px) no-repeat;
 
+    @include phones {
+        background-position: left bottom rem(-300px);
+    }
+
     &::before {
         content: url(../../img/decor/Ягоды2.svg);
         position: absolute;
-        bottom: rem(107px);
+        bottom: rem(-88px);
         left: 0;
         z-index: 2; //temp-value
 
         @include tablets {
             left: rem(-40px);
-            bottom: rem(-18px);
+            bottom: rem(-54px);
         }
 
         @include phones {
-            bottom: rem(-80px);
+            bottom: rem(-180px);
         }
     }
 
