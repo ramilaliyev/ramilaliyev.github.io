@@ -1,0 +1,71 @@
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    height: rem(392px);
+    width: rem(662px);
+}
+
+.video__wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.video__elem {
+
+}
+
+.video__splash {
+    background: url(../../img/menu/honeyNFruits.jpg) center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.video__controls {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: rem(15px);
+}
+
+.video__start {
+    // background: url(../../img/video/Play-gray.svg) center center no-repeat;
+    // border: none;
+    // width: rem(11px);
+    // height: rem(16px);
+}
+
+.video__playback {
+    width: rem(466px);
+    height: rem(7px);
+    background: #626262;
+    position: relative;
+}
+
+.video__playback-button {
+    // background: url(../../img/video/Round-btn.svg) center center no-repeat;
+    // border: none;
+    // position: absolute;
+    left: 0%;
+    // top: -50%;
+    width: rem(15px);
+    height: rem(15px);
+}
+
+.video__duration {
+
+}
+
+.video__duration-completed {
+
+}
+
+.video__duration-estimate {
+
+}

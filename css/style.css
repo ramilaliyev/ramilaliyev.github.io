@@ -980,6 +980,106 @@ img {
 .team__position {
   color: #000; }
 
+.products-menu-section {
+  background: url(../../img/menu/menu_bg.jpg) center center/cover no-repeat;
+  position: relative;
+  color: #fff; }
+  .products-menu-section::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%; }
+
+.products-menu-section__title {
+  color: #fff;
+  position: absolute;
+  left: 4.66667rem;
+  top: 6.05556rem; }
+
+.products-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.products-menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.products-menu__button {
+  position: relative;
+  width: 5.55556rem;
+  background: 40% center/cover no-repeat; }
+  .products-menu__button::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%; }
+  .products-menu__button--1 {
+    background-image: url(../../img/menu/cocomilk.jpg); }
+  .products-menu__button--2 {
+    background-image: url(../../img/menu/honeyNFruits.jpg); }
+  .products-menu__button--3 {
+    background-image: url(../../img/menu/wildberries.jpg); }
+
+.products-menu__button-text {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+  -ms-transform: translate(-50%, -50%) rotate(-90deg);
+  transform: translate(-50%, -50%) rotate(-90deg);
+  left: 50%;
+  bottom: 2.16667rem;
+  font-size: 2.66667rem;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
+  width: 100%; }
+
+.products-menu__content {
+  background: #35383adc;
+  width: 0;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: ease-in 1s;
+  -o-transition: ease-in 1s;
+  transition: ease-in 1s; }
+
+.products-menu__content-wrapper {
+  padding: 1.66667rem 4.44444rem 2.5rem 2.11111rem; }
+
+.products-menu__close-button {
+  position: absolute;
+  top: 1.11111rem;
+  right: 1.11111rem;
+  border: none;
+  background: transparent;
+  width: 1.38889rem;
+  height: 1.38889rem; }
+
+.products-menu__close-button-plank {
+  display: block;
+  width: 100%;
+  height: 0.16667rem;
+  background: #fff; }
+  .products-menu__close-button-plank:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .products-menu__close-button-plank:nth-child(2) {
+    -webkit-transform: translate(0.1px, -2.6px) rotate(-45deg);
+    -ms-transform: translate(0.1px, -2.6px) rotate(-45deg);
+    transform: translate(0.1px, -2.6px) rotate(-45deg); }
+
 .reviews-section {
   position: relative;
   background: url(../../img/decor/Узор1.svg) left bottom -9.11111rem no-repeat; }
@@ -1167,6 +1267,65 @@ img {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover; }
+
+.video-section {
+  background: #F8FAF9; }
+
+.video-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 21.77778rem;
+  width: 36.77778rem; }
+
+.video__wrapper {
+  width: 100%;
+  height: 100%; }
+
+.video__splash {
+  background: url(../../img/menu/honeyNFruits.jpg) center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%; }
+
+.video__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.83333rem; }
+
+.video__playback {
+  width: 25.88889rem;
+  height: 0.38889rem;
+  background: #626262;
+  position: relative; }
+
+.video__playback-button {
+  left: 0%;
+  width: 0.83333rem;
+  height: 0.83333rem; }
 
 .order-section {
   background: url(../../img/order-bg.jpg) no-repeat;

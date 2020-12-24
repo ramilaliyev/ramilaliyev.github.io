@@ -253,7 +253,7 @@ const init = () => {
     myMap = new ymaps.Map('map', {
         center: [55.831883, 37.575994],
         zoom: 11,
-        controls: ['zoomControl']
+        controls: []
     });
 
     const coords = [
@@ -281,3 +281,83 @@ const init = () => {
 };
 
 ymaps.ready(init);
+
+
+
+// // // // // // // // // // // // // // //
+
+// Горизонтальный аккордеон
+
+const measureWidth = item => {
+    let reqItemWidth = 0;
+
+    const winWidth = $(window).width();
+    const container = item.closest('.products-menu');
+    const titleBlocks = container.find('.products-menu__button');
+    const titleWidth = titleBlocks.width() * titleBlocks.length;
+    
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+    const textContent = item.find('.products-menu__content');
+    const pl = parseInt(textContent.css('padding-left'));
+    const pr = parseInt(textContent.css('padding-right'));
+
+    if (isMobile) {
+        reqItemWidth = winWidth - titleWidth;
+    } else {
+        reqItemWidth = 500;
+    }
+
+    return {
+        itemWidth: reqItemWidth,
+        textContentWidth: reqItemWidth - pl - pr
+    }
+
+};
+
+const closeHorizontalItem = container => {
+    const items = container.find('.products-menu__item');
+    const content = container.find('.products-menu__content');
+
+    items.removeClass('active');
+    content.width(0);
+};
+
+const openHorizontalItem = e => {
+    // const item = e.closest('.products-menu__item');
+
+    const content = e.find('.products-menu__content');
+    const textContainer = e.find('.products-menu__content-text');
+    e.addClass('active');
+
+    const item = measureWidth(e);
+
+    console.log(item);
+
+    content.width(item.itemWidth);
+    textContainer.width(item.textContentWidth);
+};
+
+$('.products-menu__button').click(e => {
+    e.preventDefault();
+    
+    const $this = $(e.currentTarget);
+    const item = $this.closest('.products-menu__item');
+    const container = $this.closest('.products-menu');
+
+    const isOpened = item.hasClass('active');
+
+    if (isOpened) {
+        closeHorizontalItem(container);
+    } else {
+        closeHorizontalItem(container);
+        openHorizontalItem(item);
+    }
+});
+
+$('.products-menu__close-button').click(e => {
+    const $this = $(e.currentTarget);
+
+    const container = $this.closest('.products-menu');
+    closeHorizontalItem(container);
+});

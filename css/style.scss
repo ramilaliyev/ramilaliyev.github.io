@@ -42,9 +42,15 @@ $phones: 480px;
 @import 'components/team-section';
 @import 'components/team';
 
+@import 'components/menu-section';
+@import 'components/menu';
+
 @import 'components/reviews-section';
 @import 'components/reviews';
 @import 'components/interactive-avatar';
+
+@import 'components/video-section';
+@import 'components/video';
 
 @import 'components/order-section';
 @import 'components/form';
