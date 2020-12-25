@@ -30,6 +30,10 @@
     transition: ease-in-out .4s;
 }
 
+.hamburger__plank--theme-dark {
+    background: #000;
+}
+
 .hamburger--active {
     z-index: $z-index-menu;
     // top: rem(42px);

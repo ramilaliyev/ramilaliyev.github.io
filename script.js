@@ -298,7 +298,7 @@ const measureWidth = item => {
     
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-    const textContent = item.find('.products-menu__content');
+    const textContent = item.find('.products-menu__content-wrapper');
     const pl = parseInt(textContent.css('padding-left'));
     const pr = parseInt(textContent.css('padding-right'));
 
@@ -324,15 +324,11 @@ const closeHorizontalItem = container => {
 };
 
 const openHorizontalItem = e => {
-    // const item = e.closest('.products-menu__item');
-
     const content = e.find('.products-menu__content');
     const textContainer = e.find('.products-menu__content-text');
     e.addClass('active');
 
     const item = measureWidth(e);
-
-    console.log(item);
 
     content.width(item.itemWidth);
     textContainer.width(item.textContentWidth);
@@ -356,8 +352,163 @@ $('.products-menu__button').click(e => {
 });
 
 $('.products-menu__close-button').click(e => {
+    e.preventDefault();
     const $this = $(e.currentTarget);
 
     const container = $this.closest('.products-menu');
     closeHorizontalItem(container);
 });
+
+
+
+
+
+// // // // // // // // // // // // // // //
+
+// One Page Scroll
+
+const section = $('.section');
+const display = $('.maincontent');
+const sideMenu = $('.fixed-menu');
+const menuItems = sideMenu.find('.fixed-menu__item');
+
+let inScroll = false;
+
+section.first().addClass('active');
+
+const mobileDetect = MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
+
+const countSectionPosition = sectionEq => {
+    return sectionEq * -100;
+}
+
+const menuColorChanger = sectionEq => {
+    const currentSection = section.eq(sectionEq);
+    const menuTheme = currentSection.attr('data-side-menu-theme');
+    const activeClass = 'fixed-menu--shadowed';
+
+    if (menuTheme === "dark") {
+        sideMenu.addClass(activeClass);
+    } else {
+        sideMenu.removeClass(activeClass);
+    }
+}
+
+const resetActiveClassForItem = (items, itemsEq, activeClass) => {
+    items.eq(itemsEq).addClass(activeClass).siblings().removeClass(activeClass);
+}
+
+const performTransition = sectionEq => {
+    if (inScroll) return;
+
+    const transitionOver = 1000;
+    const mouseInertionOver = 300;
+
+    inScroll = true;
+    const position = countSectionPosition(sectionEq);
+
+    if (isNaN(position)) {
+        return 0;
+    }
+
+    menuColorChanger(sectionEq);
+
+    display.css({
+        transform: `translateY(${position}%)`,
+    });
+
+    resetActiveClassForItem(section, sectionEq, 'active');
+
+    setTimeout(() => {
+        inScroll = false;
+
+        resetActiveClassForItem(menuItems, sectionEq, 'fixed-menu__item--active');
+    }, transitionOver + mouseInertionOver);
+};
+
+const viewportScroller = direction => {
+    const activeSection = section.filter('.active');
+    const nextSection = activeSection.next();
+    const prevSection = activeSection.prev();
+
+    return {
+        next () {
+            if (nextSection.length) {
+                performTransition(nextSection.index());
+            }
+        }, 
+        prev () {
+            if (prevSection.length) {
+                performTransition(prevSection.index());
+            }
+        }
+    }
+    
+
+};
+
+$(window).on('wheel', e => {
+    const deltaY = e.originalEvent.deltaY;
+    const scroller = viewportScroller();
+
+    if (deltaY > 0) {
+        scroller.next();
+    } 
+
+    if (deltaY < 0) {
+        scroller.prev();
+    }
+});
+
+$(window).on('keydown', e => {
+    const tagName = e.target.tagName.toLowerCase();
+
+    const userTypingInInput = tagName === "input" || tagName === 'textarea';
+
+    const scroller = viewportScroller();
+
+    if (userTypingInInput) return;
+    switch (e.keyCode) {
+        case 38:
+            scroller.prev();
+            break;
+
+        case 40:
+            scroller.next();
+            break;
+    }
+});
+
+$('.wrapper').on('touchmove', e => e.preventDefault());
+
+$('[data-scroll-to]').on('click', e => {
+    e.preventDefault();
+
+    const $this = $(e.currentTarget);
+
+    const target = $this.attr("data-scroll-to");
+    const reqSection = $(`[data-section-id=${target}]`);
+
+    performTransition(reqSection.index());
+});
+
+// https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+
+// https://cdnjs.com/libraries/jquery.touchswipe
+
+
+if (isMobile) {
+    $(body).swipe( {
+        //Generic swipe handler for all directions
+        swipe:function(event, direction) {
+            const scroller = viewportScroller();
+            let scrollerDirection = "";
+            
+            if (direction === 'up') scrollerDirection = "next";
+            if (direction === 'down') scrollerDirection = "prev";
+    
+            scroller[scrollerDirection]();
+        }
+    });
+}

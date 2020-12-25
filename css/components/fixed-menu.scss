@@ -44,3 +44,17 @@
         transform: translate(-50%, -50%);
     }
 }
+
+.fixed-menu--shadowed {    
+    .fixed-menu__item {
+        &--active, &:hover {
+            .fixed-menu__link {
+                border-color: #000;
+            }
+        }
+    }
+    
+    .fixed-menu__link::before {
+        background: #000;
+    }
+}

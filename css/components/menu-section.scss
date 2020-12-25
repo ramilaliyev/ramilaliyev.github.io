@@ -20,4 +20,14 @@
     position: absolute;
     left: rem(84px);
     top: rem(109px);
+
+    @include tablets {
+        left: rem(40px);
+        top: rem(85px);
+    }
+
+    @include phones {
+        left: rem(10px);
+        top: rem(76px);
+    }
 }

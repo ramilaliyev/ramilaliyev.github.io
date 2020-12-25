@@ -55,7 +55,8 @@
     width: 0;
     position: relative;
     overflow: hidden;
-    transition: ease-in 1s;
+    transition: width .5s;
+    will-change: width;
 }
 
 .products-menu__content-wrapper {
@@ -70,19 +71,4 @@
     background: transparent;
     width: rem(25px);
     height: rem(25px);
-}
-
-.products-menu__close-button-plank {
-    display: block;
-    width: 100%;
-    height: rem(3px);
-    background: #fff;
-
-    &:nth-child(1) {
-        transform: rotate(45deg);
-    }
-    
-    &:nth-child(2) {
-        transform: translate(0.1px, -2.6px) rotate(-45deg);
-    }
 }
