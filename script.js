@@ -376,7 +376,7 @@ let inScroll = false;
 
 section.first().addClass('active');
 
-const mobileDetect = MobileDetect(window.navigator.userAgent);
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
 const isMobile = mobileDetect.mobile();
 
 const countSectionPosition = sectionEq => {
