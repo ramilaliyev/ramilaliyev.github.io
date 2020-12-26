@@ -413,10 +413,11 @@ const performTransition = sectionEq => {
     }
 
     menuColorChanger(sectionEq);
-
+    
     display.css({
         transform: `translateY(${position}%)`,
     });
+
 
     resetActiveClassForItem(section, sectionEq, 'active');
 
@@ -512,3 +513,118 @@ if (isMobile) {
         }
     });
 }
+
+
+
+
+
+// // // // // // // // // // // // // // //
+
+// Video
+
+
+
+const video = document.querySelector('.video__player-content');
+const playBtn = document.querySelector('.video__play');
+const videoSplash = document.querySelector('.video__splash');
+const videoSplashPlayBtn = document.querySelector('.video__splash-play-btn');
+const videoPlaybackBtn = document.querySelector('.video__playback-button');
+const videoPlayback = document.querySelector('.video__playback');
+const muteBtn = document.querySelector('.video__mute-button');
+const videoVolumeBtn = document.querySelector('.video__volume-scrollbar-button');
+const videoVolume = document.querySelector('.video__volume-scrollbar');
+const videoCurrentTime = document.querySelector('.video__current-time');
+const videoDuration = document.querySelector('.video__duration');
+
+const activeVideoClass = 'video__play--active';
+
+const playFunc = () => {
+    playBtn.classList.toggle(activeVideoClass);
+    
+    if (playBtn.classList.contains(activeVideoClass)) {
+        video.play();
+        videoSplash.style.display = "none";
+    } else {
+        video.pause();
+    }
+}
+
+playBtn.addEventListener('click', e => {
+    playFunc();
+});
+
+videoSplashPlayBtn.addEventListener('click', e => {
+    playFunc();
+});
+
+muteBtn.addEventListener('click', e => {
+    const mutedVideoClass = 'video__mute-button--muted';
+    muteBtn.classList.toggle(mutedVideoClass);
+
+    if (muteBtn.classList.contains(mutedVideoClass)) {
+        video.muted = true;
+    } else {
+        video.muted = false;
+    }
+});
+
+video.addEventListener('timeupdate', e => {
+    const completedSec = video.currentTime;
+    const completedPercent = (completedSec * 100) / video.duration;
+    videoPlaybackBtn.style.left = `${completedPercent}%`;
+});
+
+video.addEventListener('ended', e => {
+    playBtn.classList.remove(activeVideoClass);
+    video.currentTime = 0;
+    videoSplash.style.display = "block";
+});
+
+videoPlayback.addEventListener('click', e => {
+    const bar = $(e.currentTarget);
+    const btnNewPosition = e.pageX - bar.offset().left;
+    const btnPositionPercent = (btnNewPosition * 100) / bar.width();
+    const newPlayerTimeSec = (video.duration / 100) * btnPositionPercent;
+    videoPlaybackBtn.style.left = `${btnPositionPercent}%`;
+    video.currentTime = newPlayerTimeSec;
+});
+
+const formatTime = timeSec => {
+    const roundTime = Math.round(timeSec);
+    
+    const minutes = addZero(Math.floor(roundTime / 60));
+    const seconds = addZero(roundTime - minutes * 60);
+    
+    function addZero(num) {
+      return num < 10 ? `0${num}` : num;
+    }
+    
+    return `${minutes} : ${seconds}`;
+};
+
+video.addEventListener('canplay', e => {
+    const durationSec = video.duration;
+    
+    let interval;
+    
+    if (typeof interval !== undefined) {
+        clearInterval(interval);
+    }
+    
+    interval = setInterval (() => {
+        const currentTime = video.currentTime;
+        videoCurrentTime.textContent = formatTime(currentTime);
+    }, 1000);
+
+
+    videoDuration.textContent = formatTime(durationSec);
+})
+
+videoVolume.addEventListener('click', e => {
+    const bar = $(e.currentTarget);
+    const btnNewPosition = e.pageX - bar.offset().left;
+    const btnPositionPercent = (btnNewPosition * 100) / bar.width();
+    const newVolume = (1 / 100) * btnPositionPercent;
+    videoVolumeBtn.style.left = `${btnPositionPercent}%`;
+    video.volume = newVolume;
+});

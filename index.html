@@ -39,7 +39,7 @@
                                             <a data-scroll-to="reviews" href="#" class="menu__link">Отзывы</a>
                                         </li>
                                         <li class="menu__item">
-                                            <a data-scroll-to="" href="#" class="menu__link">Как мы работаем</a>
+                                            <a data-scroll-to="video" href="#" class="menu__link">Как мы работаем</a>
                                         </li>
                                         <li class="menu__item">
                                             <a data-scroll-to="map" href="#" class="menu__link">Контакты</a>
@@ -588,9 +588,7 @@
                                 <div class="products-menu__content-text">
                                     Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. 
                                     Так и вкуснее, и полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший 
-                                    друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. 
-                                    Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. 
-                                    Надо бы, кстати, бабулю поздравить с днём Победы.
+                                    друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало.
                                 </div>
                             </div>
                         </div>
@@ -732,29 +730,42 @@
                     </div>
                 </div>
             </section>
-            <!-- <section class="section video-section">
+            <section data-side-menu-theme="dark" data-section-id="video"  class="section video-section">
                 <div class="container video-container">
-                    <h2 class="section__title">Как мы работаем</h2>
-                    <div class="video">
-                        <div class="video__wrapper">
-                            <div id="yt-video" class="video__elem"></div>
-                            <div class="video__splash"></div>
-                        </div>
-                        <div class="video__controls">
-                            <button class="video__start"></button>
-                            <div class="video__playback">
-                                <a class="video__playback-button">
-                                    <img src="img/video/Round-btn.svg" alt="round" class="video__playback-icon">
-                                </a>
-                            </div>
-                            <div class="video__duration">
-                                <span class="video__duration-completed">0:00</span> |
-                                <span class="video__duration-estimate">0:00</span>
+                    <h2 class="section__title video-section__title">Как мы работаем</h2>
+                    <div class="video-wrapper">
+                        <div class="video">
+                            <div class="video__screen">
+                                <div class="video__player">
+                                    <video src="ourWork.mp4" class="video__player-content"></video>
+                                </div>
+                                <div class="video__splash">
+                                    <div class="video__splash-content">
+                                        <img src="img/menu/honeyNFruits.jpg" class="video__splash-img" alt="splash">
+                                        <div class="video__splash-play-btn"></div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="video__controls">
+                                <div class="video__play"></div>
+                                <div class="video__playback">
+                                    <div class="video__playback-button video__circle-button"></div>
+                                </div>
+                                <div class="video__volume">
+                                    <div class="video__mute-button"></div>
+                                    <div class="video__volume-scrollbar">
+                                        <div class="video__volume-scrollbar-button video__circle-button"></div>
+                                    </div>
+                                </div>
+                                <div class="video__time">
+                                    <div class="video__current-time">00:00</div> /
+                                    <div class="video__duration">00:00</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
             <section data-side-menu-theme="light" data-section-id="order" class="section order-section section--font-color--green">
                 <div class="container order-container">
                     <h2 class="section__title order-section__title">Закажите доставку</h2>
@@ -926,7 +937,7 @@
                 <a data-scroll-to="reviews" href="#" class="fixed-menu__link"></a>
             </li>
             <li class="fixed-menu__item">
-                <a data-scroll-to="" href="#" class="fixed-menu__link"></a>
+                <a data-scroll-to="video" href="#" class="fixed-menu__link"></a>
             </li>
             <li class="fixed-menu__item">
                 <a data-scroll-to="order" href="#" class="fixed-menu__link"></a>
